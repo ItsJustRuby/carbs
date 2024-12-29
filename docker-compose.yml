@@ -1,0 +1,6 @@
+services:
+  main:
+    build:
+      dockerfile: Dockerfile
+      context: src
+    container_name: carbs-main

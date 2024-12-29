@@ -1,5 +1,10 @@
 services:
   main:
     container_name: carbs-tests
+    env_file: .env.example
     environment:
+      # Note: You never want this in production.
       CARBS_EXIT_ON_SUCCESS: 1
+    volumes:
+      - ./example/config:/config
+      - ./example/input:/exampleInput:ro

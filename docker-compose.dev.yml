@@ -1,9 +1,5 @@
 services:
   main:
-    build:
-      dockerfile: Dockerfile
-      context: src
-    container_name: carbs-main
     env_file: .env.dev
     volumes:
       - ./example/config:/config
