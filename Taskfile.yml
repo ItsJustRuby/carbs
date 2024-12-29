@@ -1,8 +1,6 @@
 # https://taskfile.dev
 
-# TODO: Prettier
-# TODO: Shellcheck
-version: '3'
+version: "3"
 
 vars:
   GREETING: Hello, World!
@@ -12,3 +10,7 @@ tasks:
     aliases: ["dev"]
     cmds:
       - sh ./scripts/dev.sh
+
+  tests:
+    cmds:
+      - sh ./scripts/tests.sh

@@ -1,3 +1,3 @@
 export default {
-  "**/*.{md,js,json}": "bun run prettier --write",
+  "**/*.{md,js,json,yml}": "bun run prettier --write",
 };
