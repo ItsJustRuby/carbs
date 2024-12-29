@@ -4,8 +4,7 @@ services:
       dockerfile: Dockerfile
       context: src
     container_name: carbs-main
-    environment:
-      - CARBS_BACKUP_TARGETS=/exampleInput
+    env_file: .env.dev
     volumes:
       - ./example/config:/config
       - ./example/input:/exampleInput:ro

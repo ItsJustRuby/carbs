@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # shellcheck source-path=SCRIPTDIR
 . "$(dirname "$0")/install_rclone.sh"

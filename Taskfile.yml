@@ -11,4 +11,4 @@ tasks:
   default:
     aliases: ["dev"]
     cmds:
-      - ./scripts/dev.sh
+      - sh ./scripts/dev.sh

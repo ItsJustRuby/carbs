@@ -10,13 +10,19 @@ if [ -z "${CARBS_PATH}" ]; then
   exit 8
 fi
 
+if [ -z "${CARBS_PASSWORD}" ]; then
+  echo "You must configure a CARBS_PASSWORD for the remote."
+  exit 8
+fi
+
 CARBS_REMOTE=$(rclone config dump | jq -r 'to_entries[0]["key"]')
 
-# Magic env var for restic to access
+# Magic env vars for restic to access the remote
 export RESTIC_REPOSITORY="rclone:$CARBS_REMOTE:$CARBS_PATH"
+export RESTIC_PASSWORD="$CARBS_PASSWORD"
 
 echo "Checking if repository exists..."
-restic cat config > /dev/null
+(restic cat config > /dev/null) && true
 REPOSITORY_EXISTS=$?
 
 if [ "$REPOSITORY_EXISTS" -ne 0 ]

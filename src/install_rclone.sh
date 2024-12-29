@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 if [ ! -f "/config/rclone.conf" ]; then
     echo "You must mount an rclone config file at /config/rclone.conf."
