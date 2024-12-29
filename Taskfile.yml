@@ -1,0 +1,14 @@
+# https://taskfile.dev
+
+# TODO: Prettier
+# TODO: Shellcheck
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    aliases: ["dev"]
+    cmds:
+      - ./scripts/dev.sh

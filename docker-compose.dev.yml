@@ -1,0 +1,11 @@
+services:
+  main:
+    build:
+      dockerfile: Dockerfile
+      context: src
+    container_name: carbs-main
+    environment:
+      - CARBS_BACKUP_TARGETS=/exampleInput
+    volumes:
+      - ./example/config:/config
+      - ./example/input:/exampleInput:ro
