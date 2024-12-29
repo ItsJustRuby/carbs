@@ -1,4 +1,3 @@
 export default {
-    "Dockerfile": "hadolint",
-    "*.sh": "npx shellcheck",
-  };
+  "*.sh": "npx shellcheck",
+};

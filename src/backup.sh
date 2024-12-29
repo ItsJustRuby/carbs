@@ -3,7 +3,7 @@ set -ev
 
 echo "Starting backup..."
 
-restic backup "$CARBS_BACKUP_TARGETS" --exclude-file=/config/exclude.txt
+restic backup "$CARBS_BACKUP_TARGETS" --exclude-file=/config/exclude.txt --verbose
 echo "Backup complete."
 
 echo "Pruning old snapshots..."

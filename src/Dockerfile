@@ -6,7 +6,5 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY . .
-# TODO: Check if required
-RUN chmod a+rwx -- *.sh
 
 ENTRYPOINT [ "/bin/sh", "/app/install.sh" ]

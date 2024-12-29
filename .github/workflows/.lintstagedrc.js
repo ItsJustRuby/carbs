@@ -1,4 +1,4 @@
 export default {
-    "**/*.yml": "actionlint",
-  };
+  "**/*.yml": "actionlint",
+};
   
