@@ -13,8 +13,7 @@ jobs:
       - name: Run hadolint
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: "*.Dockerfile"
-          recursive: true
+          dockerfile: "src/Dockerfile"
   github-action-workflows:
     name: "GitHub Action workflows"
     runs-on: ubuntu-latest
