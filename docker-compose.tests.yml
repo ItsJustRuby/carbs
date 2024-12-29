@@ -1,0 +1,5 @@
+services:
+  main:
+    container_name: carbs-tests
+    environment:
+      CARBS_EXIT_ON_SUCCESS: 1
