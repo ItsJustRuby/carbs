@@ -16,3 +16,7 @@ echo "Pruning complete."
 echo "Checking backup for consistency..."
 restic check
 echo "Check complete."
+
+echo "Storage quota information"
+CARBS_REMOTE=$(rclone config dump | jq -r 'to_entries[0]["key"]')
+rclone about "rclone:$CARBS_REMOTE"
