@@ -1,0 +1,6 @@
+services:
+  main:
+    env_file: .env.dev
+    volumes:
+      - ./example/config:/config
+      - ./example/input:/exampleInput:ro
