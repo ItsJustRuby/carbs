@@ -6,5 +6,6 @@ RUN mkdir /carbs
 WORKDIR /carbs
 
 COPY . .
+RUN chmod a+rwx backup.sh
 
 ENTRYPOINT [ "/bin/sh", "/carbs/install.sh" ]
