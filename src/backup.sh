@@ -3,7 +3,9 @@ set -ev
 
 echo "Starting backup..."
 
-restic backup "$CARBS_BACKUP_TARGETS" --exclude-file=/config/exclude.txt --verbose
+# We intentionally want this env var to contain spaces so they get expanded into multiple parameters here
+# shellcheck disable=SC2086
+restic backup $CARBS_BACKUP_TARGETS --exclude-file=/config/exclude.txt --verbose
 echo "Backup complete."
 
 echo "Pruning old snapshots..."
