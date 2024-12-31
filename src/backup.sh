@@ -21,4 +21,4 @@ echo "Check complete."
 
 echo "Storage quota information"
 CARBS_REMOTE=$(rclone config dump | jq -r 'to_entries[0]["key"]')
-rclone about "rclone:$CARBS_REMOTE"
+rclone about "$CARBS_REMOTE:"
