@@ -16,6 +16,9 @@ if [ -n "${CARBS_EXIT_ON_SUCCESS}" ]; then
   exit 0
 fi
 
+echo "Printing cronjob output to this terminal as well as as /carbs/cron.log..."
+tail --follow /carbs/cron.log &
+
 # Run the cron daemon in the foreground, with log level 8, printing to stderr.
 echo "Starting cron daemon"
 /usr/sbin/crond -f -d 8
