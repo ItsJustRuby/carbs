@@ -2,6 +2,7 @@
 set -ev
 
 echo "Starting backup..."
+date
 
 # We intentionally want this env var to contain spaces so they get expanded into multiple parameters here
 # shellcheck disable=SC2086
