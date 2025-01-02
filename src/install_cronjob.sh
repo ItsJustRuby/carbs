@@ -17,7 +17,8 @@ if [ -n "${CARBS_EXIT_ON_SUCCESS}" ]; then
 fi
 
 echo "Printing cronjob output to this terminal as well as as /carbs/cron.log..."
-tail --follow /carbs/cron.log &
+touch /carbs/cron.log
+tail -f /carbs/cron.log &
 
 # Run the cron daemon in the foreground, with log level 8, printing to stderr.
 echo "Starting cron daemon"
