@@ -1,4 +1,4 @@
-FROM rclone/rclone:1.68.2 AS rclone
+FROM rclone/rclone:1.69.0 AS rclone
 FROM restic/restic:0.17.3
 COPY --from=rclone /usr/local/bin/rclone /usr/local/bin/rclone
 
